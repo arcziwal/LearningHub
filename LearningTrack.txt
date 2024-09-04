@@ -1,0 +1,361 @@
+Plan Nauki Programowania - 68 Tygodni
+
+Blok 1: Powtórka Podstaw (8 tygodni)
+
+Tydzień 1-2: Python - Podstawy
+Cele tygodnia:
+- Przypomnienie składni Pythona i podstawowych struktur danych.
+- Zrozumienie, jak pisać proste programy.
+
+Plan nauki:
+- Podstawy Pythona:
+  - Instalacja Pythona i narzędzi (PyCharm, VS Code).
+  - Typy danych: liczby całkowite, zmiennoprzecinkowe, ciągi znaków (str), listy, krotki, słowniki, zbiory.
+  - Operatory: arytmetyczne, porównania, logiczne.
+  - Struktury sterujące: if, else, elif, pętle (for, while).
+  - Funkcje: definicja, wywołanie, parametry, zwracanie wartości.
+
+Projekt:
+- Kalkulator:
+  - Stwórz prosty kalkulator, który wykonuje podstawowe operacje matematyczne (dodawanie, odejmowanie, mnożenie, dzielenie).
+  - Rozszerz go o możliwość obsługi bardziej skomplikowanych obliczeń (potęgowanie, pierwiastkowanie).
+
+Tydzień 3-4: Programowanie Obiektowe w Pythonie
+Cele tygodnia:
+- Zrozumienie pojęcia programowania obiektowego.
+- Umiejętność tworzenia i używania klas i obiektów.
+
+Plan nauki:
+- Programowanie obiektowe (OOP):
+  - Klasy i obiekty: co to jest, jak je tworzyć.
+  - Atrybuty i metody: czym są, jak je definiować.
+  - Konstruktor (__init__): tworzenie obiektów z danymi początkowymi.
+  - Dziedziczenie: jak tworzyć klasy bazowe i pochodne.
+  - Polimorfizm i nadpisywanie metod: jak zmieniać zachowanie klas pochodnych.
+  - Enkapsulacja: ukrywanie danych i metod.
+
+Projekt:
+- System zarządzania biblioteką:
+  - Stwórz program, który zarządza książkami, autorami i wypożyczeniami.
+  - Implementacja klas takich jak Książka, Autor, Czytelnik, Wypożyczenie.
+  - Umożliwienie dodawania nowych książek, autorów oraz wypożyczania książek przez czytelników.
+
+Tydzień 5-6: Praca z Bazami Danych - PostgreSQL
+Cele tygodnia:
+- Zrozumienie podstaw relacyjnych baz danych i SQL.
+- Umiejętność tworzenia i zarządzania bazą danych PostgreSQL.
+
+Plan nauki:
+- Podstawy SQL:
+  - Tworzenie tabel (CREATE TABLE).
+  - Wstawianie danych (INSERT INTO).
+  - Zapytania do bazy (SELECT, WHERE, JOIN).
+  - Aktualizowanie i usuwanie danych (UPDATE, DELETE).
+
+- PostgreSQL:
+  - Instalacja i konfiguracja PostgreSQL.
+  - Tworzenie schematów i tabel.
+  - Relacje między tabelami (1 do 1, 1 do wielu, wiele do wielu).
+  - Tworzenie zaawansowanych zapytań do analizy danych.
+
+Projekt:
+- System rezerwacji sal konferencyjnych:
+  - Tworzenie bazy danych do zarządzania salami, rezerwacjami i użytkownikami.
+  - Implementacja zapytań do rezerwacji sal na podstawie dostępności i preferencji użytkowników.
+
+Tydzień 7-8: Frontend - HTML, CSS, JavaScript
+Cele tygodnia:
+- Odświeżenie podstaw HTML, CSS i JavaScript.
+- Nauka budowania responsywnych stron internetowych.
+
+Plan nauki:
+- HTML i CSS:
+  - Struktura dokumentu HTML: znaczniki, atrybuty, formularze.
+  - Style CSS: selektory, właściwości, jednostki, layouty (flexbox, grid).
+  - Tworzenie responsywnych stron za pomocą media queries.
+
+- JavaScript:
+  - Podstawy składni: zmienne, funkcje, obiekty, tablice.
+  - Manipulacja DOM: dynamiczne zmiany w dokumencie HTML.
+  - Obsługa zdarzeń: kliknięcia, formularze, zmiany stanu.
+  - AJAX i fetch API: pobieranie danych z serwera bez przeładowywania strony.
+
+Projekt:
+- Dynamiczna strona internetowa:
+  - Stwórz responsywną stronę z dynamicznym interfejsem.
+  - Dodaj funkcje takie jak formularz kontaktowy, galeria zdjęć, integracja z API pogodowym.
+
+Blok 2: Zaawansowane Tematy Backendowe (12 tygodni)
+
+Tydzień 9-12: Django - Framework Webowy
+Cele tygodnia:
+- Nauka tworzenia aplikacji webowych w Django.
+- Zrozumienie architektury MVC (Model-View-Controller).
+
+Plan nauki:
+- Django:
+  - Instalacja i konfiguracja projektu Django.
+  - Tworzenie modeli i migracji bazy danych.
+  - Tworzenie widoków i szablonów HTML.
+  - Obsługa formularzy i walidacja danych.
+  - Implementacja systemu logowania i rejestracji użytkowników.
+
+Projekt:
+- Blog internetowy:
+  - Stwórz aplikację blogową z możliwością dodawania postów, komentowania i systemem logowania użytkowników.
+
+Tydzień 13-16: API i RESTful Services
+Cele tygodnia:
+- Nauka tworzenia i zarządzania API.
+- Zrozumienie zasad REST i JSON.
+
+Plan nauki:
+- API:
+  - Tworzenie API w Django REST Framework (DRF).
+  - Serializacja danych i walidacja wejściowa.
+  - Obsługa zapytań GET, POST, PUT, DELETE.
+  - Autoryzacja i uwierzytelnianie (JWT, OAuth).
+  - Integracja z frontendem za pomocą JavaScript i AJAX.
+
+Projekt:
+- System zarządzania zadaniami (To-Do App):
+  - Stwórz API do zarządzania zadaniami, z funkcjami dodawania, edytowania, usuwania i filtrowania zadań.
+  - Implementacja API i integracja z frontendem.
+
+Tydzień 17-20: Zaawansowane Bazy Danych
+Cele tygodnia:
+- Praca z zaawansowanymi funkcjami baz danych.
+- Zrozumienie optymalizacji zapytań i indeksowania.
+
+Plan nauki:
+- Bazy danych:
+  - Tworzenie zaawansowanych relacji i transakcji.
+  - Implementacja procedur składowanych i wyzwalaczy.
+  - Indeksowanie danych i optymalizacja zapytań.
+  - Zarządzanie wersjami bazy danych i migracje.
+
+Projekt:
+- System zarządzania produktami (Inventory Management):
+  - Stwórz bazę danych do zarządzania stanami magazynowymi, zamówieniami i dostawami.
+  - Implementacja zapytań optymalizujących zarządzanie dużą ilością danych.
+
+Tydzień 21-24: Docker i Kubernetes
+Cele tygodnia:
+- Nauka konteneryzacji aplikacji za pomocą Dockera.
+- Zrozumienie podstaw zarządzania kontenerami przy użyciu Kubernetes.
+
+Plan nauki:
+- Docker:
+  - Instalacja Dockera i tworzenie Dockerfile.
+  - Budowanie i uruchamianie kontenerów.
+  - Zarządzanie obrazami Docker i wolumenami.
+  - Tworzenie sieci kontenerowych.
+
+- Kubernetes:
+  - Instalacja Minikube i konfiguracja klastra Kubernetes.
+  - Tworzenie i zarządzanie podami, usługami i wdrożeniami.
+  - Skalowanie aplikacji i zarządzanie konfiguracją.
+
+Projekt:
+- Konteneryzacja aplikacji Django:
+  - Stwórz kontener dla aplikacji Django i bazy danych PostgreSQL.
+  - Uruchom aplikację w środowisku Kubernetes, skalując ją i zarządzając zasobami.
+
+Blok 3: Technologie Chmurowe (16 tygodni)
+
+Tydzień 25-28: Amazon Web Services (AWS)
+Cele tygodnia:
+- Zrozumienie podstaw AWS i nauka korzystania z usług chmurowych.
+- Implementacja aplikacji w chmurze.
+
+Plan nauki:
+- AWS:
+  - Podstawowe usługi: EC2, S3, RDS, IAM.
+  - Tworzenie instancji EC2 i wdrażanie aplikacji.
+  - Przechowywanie danych w S3 i konfiguracja polityk dostępu.
+  - Ustawianie bazy danych RDS i łączenie jej z aplikacją.
+  - Zarządzanie dostępem za pomocą IAM.
+
+Projekt:
+- Wdrożenie aplikacji w AWS:
+  - Wdrożenie aplikacji Django na EC2 z wykorzystaniem RDS jako bazy danych.
+  - Przechowywanie plików użytkowników w S3 i zarządzanie dostępem.
+
+Tydzień 29-32: Microsoft Azure
+Cele tygodnia:
+- Nauka pracy z Microsoft Azure.
+- Wdrożenie aplikacji w środowisku Azure.
+
+Plan nauki:
+- Azure:
+  - Podstawowe usługi: Virtual Machines, Azure SQL Database, Azure Storage, Azure Active Directory.
+  - Tworzenie i zarządzanie maszynami wirtualnymi.
+  - Wdrożenie aplikacji webowych za pomocą Azure App Services.
+  - Przechowywanie danych i zarządzanie bazą w Azure SQL Database.
+  - Konfiguracja dostępu i zarządzanie użytkownikami za pomocą Azure Active Directory.
+
+Projekt:
+- Wdrożenie aplikacji w Azure:
+  - Wdrożenie aplikacji Django na Azure z wykorzystaniem Azure SQL Database.
+  - Przechowywanie danych użytkowników i zarządzanie dostępem przez Azure AD.
+
+Tydzień 33-36: Google Cloud Platform (GCP)
+Cele tygodnia:
+- Nauka pracy z GCP.
+- Wdrożenie aplikacji w środowisku GCP.
+
+Plan nauki:
+- GCP:
+  - Podstawowe usługi: Compute Engine, Cloud SQL, Google Cloud Storage, IAM.
+  - Tworzenie i zarządzanie instancjami Compute Engine.
+  - Wdrożenie aplikacji webowych za pomocą App Engine.
+  - Przechowywanie danych w Cloud Storage i zarządzanie bazą danych w Cloud SQL.
+  - Konfiguracja dostępu i zarządzanie użytkownikami za pomocą IAM.
+
+Projekt:
+- Wdrożenie aplikacji w GCP:
+  - Wdrożenie aplikacji Django na GCP z wykorzystaniem Cloud SQL i Cloud Storage.
+  - Zarządzanie dostępem użytkowników i konfiguracja zabezpieczeń.
+
+Blok 4: Testowanie i Bezpieczeństwo (16 tygodni)
+
+Tydzień 37-40: Testowanie Automatyczne
+Cele tygodnia:
+- Nauka testowania automatycznego w Pythonie.
+- Implementacja testów jednostkowych, integracyjnych i funkcjonalnych.
+
+Plan nauki:
+- Testowanie:
+  - Podstawy testowania jednostkowego za pomocą unittest i pytest.
+  - Tworzenie testów jednostkowych dla funkcji i klas.
+  - Testy integracyjne: testowanie współpracy między różnymi komponentami systemu.
+  - Testy funkcjonalne: testowanie aplikacji w warunkach zbliżonych do produkcyjnych.
+  - Mockowanie i tworzenie fikcyjnych danych do testów.
+
+Projekt:
+- Testowanie aplikacji Django:
+  - Implementacja zestawu testów jednostkowych, integracyjnych i funkcjonalnych dla aplikacji Django.
+  - Użycie narzędzi do mockowania i symulacji zachowania użytkowników.
+
+Tydzień 41-44: Bezpieczeństwo Aplikacji Webowych
+Cele tygodnia:
+- Nauka zabezpieczania aplikacji webowych.
+- Implementacja standardowych praktyk bezpieczeństwa.
+
+Plan nauki:
+- Bezpieczeństwo:
+  - Zabezpieczenia aplikacji przed atakami XSS, CSRF i SQL Injection.
+  - Implementacja HTTPS i zarządzanie certyfikatami SSL.
+  - Uwierzytelnianie i autoryzacja: OAuth2, JWT.
+  - Zarządzanie sesjami i zabezpieczanie danych użytkowników.
+  - Monitorowanie i logowanie zdarzeń związanych z bezpieczeństwem.
+
+Projekt:
+- Zabezpieczenie aplikacji Django:
+  - Dodanie zabezpieczeń przed typowymi atakami webowymi.
+  - Implementacja bezpiecznego systemu logowania użytkowników z wykorzystaniem JWT.
+  - Monitorowanie i logowanie zdarzeń związanych z bezpieczeństwem w aplikacji.
+
+Blok 5: Sztuczna Inteligencja i Uczenie Maszynowe (12 tygodni)
+
+Tydzień 45-48: Podstawy Uczenia Maszynowego z TensorFlow
+Cele tygodnia:
+- Nauka podstaw uczenia maszynowego i korzystania z TensorFlow.
+- Implementacja prostych modeli uczenia maszynowego.
+
+Plan nauki:
+- Uczenie maszynowe:
+  - Wprowadzenie do uczenia maszynowego: rodzaje, algorytmy, aplikacje.
+  - Instalacja TensorFlow i tworzenie pierwszych modeli.
+  - Podstawy przetwarzania danych: normalizacja, podział na zbiór treningowy i testowy.
+  - Tworzenie i trenowanie modeli klasyfikacyjnych i regresyjnych.
+  - Ocena i optymalizacja modeli.
+
+Projekt:
+- Model klasyfikacji obrazów:
+  - Stwórz model do klasyfikacji obrazów np. z zestawu danych CIFAR-10.
+  - Przetrenuj model i oceń jego skuteczność, a następnie spróbuj go zoptymalizować.
+
+Tydzień 49-52: Zaawansowane Uczenie Maszynowe
+Cele tygodnia:
+- Zrozumienie zaawansowanych technik uczenia maszynowego.
+- Implementacja bardziej skomplikowanych modeli.
+
+Plan nauki:
+- Uczenie maszynowe:
+  - Sieci neuronowe: architektura, warstwy, aktywacje.
+  - Uczenie głębokie: wprowadzenie do głębokich sieci neuronowych.
+  - Praca z danymi sekwencyjnymi: LSTM, RNN.
+  - Implementacja sieci konwolucyjnych do analizy obrazów.
+  - Techniki regularyzacji i unikanie przeuczenia modeli.
+
+Projekt:
+- Model do analizy sentymentu:
+  - Stwórz model LSTM do analizy sentymentu w tekstach np. recenzjach filmów.
+  - Przetrenuj model, oceniaj jego skuteczność i eksperymentuj z różnymi architekturami.
+
+Tydzień 53-56: Integracja AI z Aplikacją Webową
+Cele tygodnia:
+- Nauka integracji modeli AI z aplikacjami webowymi.
+- Implementacja predykcji na żywo.
+
+Plan nauki:
+- Integracja AI:
+  - Tworzenie API do obsługi modeli AI.
+  - Implementacja asynchronicznej obsługi predykcji.
+  - Użycie modeli AI w czasie rzeczywistym w aplikacjach Django.
+  - Optymalizacja modeli pod kątem wydajności i czasu odpowiedzi.
+
+Projekt:
+- Integracja AI z aplikacją Django:
+  - Stwórz aplikację Django, która wykorzystuje model AI do predykcji na żywo.
+  - Na przykład: aplikacja do rozpoznawania obrazów lub analiza sentymentu w czasie rzeczywistym.
+
+Blok 6: Zaawansowane Tematy i Projekty (12 tygodni)
+
+Tydzień 57-60: DevOps i CI/CD
+Cele tygodnia:
+- Nauka praktyk DevOps i wdrażania CI/CD.
+- Automatyzacja wdrożeń i zarządzanie środowiskami produkcyjnymi.
+
+Plan nauki:
+- DevOps:
+  - Wprowadzenie do DevOps i jego roli w organizacji.
+  - Tworzenie i zarządzanie pipeline'ami CI/CD za pomocą narzędzi takich jak Jenkins, GitLab CI, GitHub Actions.
+  - Automatyzacja testowania, budowania i wdrażania aplikacji.
+  - Monitorowanie aplikacji w środowiskach produkcyjnych i zarządzanie logami.
+  - Skalowanie aplikacji i zarządzanie infrastrukturą w chmurze.
+
+Projekt:
+- Automatyzacja wdrożeń aplikacji:
+  - Stwórz pipeline CI/CD dla aplikacji Django z automatycznym testowaniem, budowaniem i wdrażaniem w środowisku produkcyjnym.
+  - Skonfiguruj monitorowanie i logowanie aplikacji po wdrożeniu.
+
+Tydzień 61-64: Projektowanie Skalowalnych Systemów
+Cele tygodnia:
+- Nauka projektowania systemów skalowalnych i rozproszonych.
+- Implementacja aplikacji, które mogą obsłużyć dużą liczbę użytkowników.
+
+Plan nauki:
+- Skalowalność:
+  - Wprowadzenie do architektury rozproszonej i mikroserwisów.
+  - Projektowanie skalowalnych baz danych i systemów kolejkowych (np. RabbitMQ, Kafka).
+  - Implementacja cache'owania za pomocą Redis lub Memcached.
+  - Zarządzanie rozproszonymi usługami i load balancerami.
+  - Monitoring i optymalizacja wydajności.
+
+Projekt:
+- Skalowalna aplikacja webowa:
+  - Stwórz aplikację webową, która obsługuje dużą liczbę użytkowników za pomocą skalowalnej architektury.
+  - Implementacja mikroserwisów, load balancingu i cache'owania.
+
+Tydzień 65-68: Duży Projekt Końcowy
+Cele tygodnia:
+- Zastosowanie zdobytej wiedzy w dużym, kompleksowym projekcie.
+- Praca nad projektem, który może stać się portfolio do prezentacji przyszłym pracodawcom.
+
+Projekt:
+- Kompleksowa aplikacja webowa:
+  - Stwórz aplikację webową wykorzystującą wszystkie zdobyte umiejętności.
+  - Aplikacja powinna mieć zaawansowane funkcje backendowe, skalowalną architekturę, zintegrowane modele AI oraz zabezpieczenia i pełne testy automatyczne.
+  - Wdrożenie aplikacji w chmurze z pełnym pipeline'em CI/CD oraz monitorowaniem i optymalizacją.
