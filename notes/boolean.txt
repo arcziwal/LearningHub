@@ -1,0 +1,20 @@
+Wartości boolean mogą przyjmować dwie wartości: True oraz False.
+Każde wyrażenie w Pythonie można sprowadzić do dwóch odpowiedzi: True albo False
+
+Większość wartości sprowadza się do True, jeśli ma jakąkolwiek zawartość
+Każdy string jest True, o ile nie jest pustym stringiem ("")
+Każdy numer jest True, o ile nie jest zerem
+Każda lista, krotka, set, słownik jest True, o ile nie są puste
+
+W zasadzie nie ma wielu wartości sprowadzających się do False. Są to np. puste wartości: (), [], {}, "", numer 0, wartość None oraz oczywiście wartość False
+
+False zwraca również objekt, stworzony z klasy posiadającej metodę __len__ zwracającą 0 albo False. Np.
+class myclass():
+  def __len__(self):
+    return 0
+
+myobj = myclass()
+print(bool(myobj))
+
+Python posiada również wiele wbudowanych funkcji, które mogą zwracać wartości bool, np. isinstance(), issubclass(), etc.
+

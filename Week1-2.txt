@@ -1,0 +1,162 @@
+### Tydzień 1: Python - Podstawy
+
+Cel:
+Poznanie składni Pythona, podstawowych typów danych i operacji.
+Plan nauki:
+
+## Dzień 1: Instalacja i konfiguracja środowiska DONE
+
+Zainstaluj Pythona.
+Skonfiguruj środowisko IDE: PyCharm, VS Code (przygotuj także terminal do uruchamiania programów).
+Nauka pracy z REPL (Python Interactive Shell).
+
+## Dzień 2: Typy danych i zmienne DONE
+
+Typy danych: liczby całkowite (int), zmiennoprzecinkowe (float), ciągi znaków (str).
+Tworzenie zmiennych, operacje na nich.
+Podstawowe operacje matematyczne i użycie funkcji wbudowanych (print(), input(), type()).
+Stringi:
+Ważne metody:
+upper(), lower(), strip(), replace(), split(), join(), startswith(), endswith(), find(), count().
+Operacje na ciągach znaków: indeksowanie, wycinanie (slicing).
+Przykłady praktyczne: konwersja tekstu, operacje na słowach w zdaniach.
+
+## Dzień 3: Struktury danych
+
+Listy: tworzenie, dostęp do elementów, modyfikacja
+Ważne metody:
+append(), insert(), remove(), pop(), sort(), reverse(), index(), count(), copy().
+Zagnieżdżone listy i operacje na nich.
+Przykłady praktyczne: modyfikacja list, sortowanie, wyszukiwanie elementów.
+Krotki: różnice między listami a krotkami.
+Słowniki: klucze i wartości, iteracja po słownikach.
+Zbiory: operacje na zbiorach.
+
+## Dzień 4: Operatory i logika DONE
+
+Operatory arytmetyczne (+, -, *, /, //, %, **).
+Operatory porównania (==, !=, >, <, >=, <=).
+Operatory logiczne (and, or, not).
+Warunki logiczne w praktyce (wyrażenia złożone).
+
+## Dzień 5: Instrukcje warunkowe
+
+if, elif, else: zagnieżdżanie warunków, dobre praktyki w czytelności kodu.
+Obsługa różnych sytuacji w kodzie (np. brak danych, błędne wartości).
+
+## Dzień 6: Pętle
+
+Pętla for: iteracja po listach, ciągach znaków, słownikach.
+Pętla while: warunkowe wykonywanie operacji.
+Pętla z instrukcjami break i continue.
+Przykłady praktyczne: zliczanie, iteracja po danych, tworzenie listy.
+List comprehension:
+Składnia i zastosowanie.
+Tworzenie nowych list z pętli for, z filtrami i warunkami.
+Przykłady praktyczne: generowanie list na podstawie innych list (np. lista kwadratów liczb, lista słów spełniających określone kryteria).
+
+## Dzień 7: Funkcje
+
+Tworzenie funkcji (def), parametry, wartości domyślne.
+Zwracanie wartości, wywołanie funkcji.
+Przekazywanie danych między funkcjami.
+Ćwiczenia: pisanie prostych funkcji obliczeniowych (np. sumowanie, znajdowanie maksimum).
+
+### Tydzień 2: Pogłębianie wiedzy i projekt
+
+Cel:
+Zrozumienie pracy z bardziej zaawansowanymi strukturami i stworzenie własnego projektu.
+Plan nauki:
+
+## Dzień 8: Zaawansowane funkcje
+
+Argumenty pozycyjne i nazwane.
+Funkcje z wieloma zwracanymi wartościami (krotki).
+Zasięg zmiennych (local, global).
+Praca z modułami: importowanie funkcji (math, random).
+
+##Dzień 9: Obsługa błędów
+
+Wprowadzenie do obsługi wyjątków: try, except, else, finally.
+Tworzenie bezpiecznego kodu, reagowanie na błędy użytkownika.
+Testowanie kodu w celu zapobiegania błędom.
+
+## Dzień 10: Projekt Kalkulator - Podstawowa wersja
+
+Napisz kalkulator obsługujący dodawanie, odejmowanie, mnożenie i dzielenie.
+Obsługa błędów (np. dzielenie przez zero).
+
+## Dzień 11: Rozszerzenie Kalkulatora
+
+Dodaj funkcje potęgowania, pierwiastkowania.
+Umożliw wybór operacji przez użytkownika.
+Obsługa kilku obliczeń z rzędu (pętla do momentu, aż użytkownik zdecyduje zakończyć program).
+
+## Dzień 12: Zaawansowane struktury danych
+
+Przegląd zaawansowanych typów: deque, OrderedDict, defaultdict, Counter z modułu collections.
+Zastosowanie tych struktur w praktycznych problemach.
+
+## Dzień 13: Testowanie kodu
+
+Testowanie jednostkowe: wprowadzenie do modułu unittest.
+Tworzenie testów dla funkcji kalkulatora.
+Symulacja różnych scenariuszy użytkowania.
+
+## Dzień 14: Podsumowanie i refaktoryzacja
+
+Przeanalizuj napisany kod kalkulatora, optymalizuj, jeśli jest to potrzebne.
+Dodaj komentarze, upewnij się, że kod jest czytelny.
+Podsumowanie: przemyśl, co udało się osiągnąć, zaplanuj kolejne kroki (np. przejście do bardziej zaawansowanych tematów w Pythonie, jak obiektowość).
+
+Projekty:
+
+1. Kalkulator zaawansowany (rozbudowany projekt)
+Zrealizuj projekt kalkulatora, który wykonuje podstawowe operacje matematyczne: dodawanie, odejmowanie, mnożenie, dzielenie.
+Dodaj obsługę potęgowania, pierwiastkowania oraz procentów.
+Umożliw użytkownikowi wybór operacji i wpisywanie wartości. Upewnij się, że program obsługuje nieprawidłowe dane (np. dzielenie przez zero).
+Dodatkowe wyzwanie: dodaj obsługę ciągu operacji (np. 5 + 3 * 2).
+Rozwinięcie: Dodaj możliwość wykonywania wieloetapowych obliczeń, zapamiętywania wyniku, aby można było go wykorzystać w kolejnych działaniach.
+
+2. Analizator tekstu
+Stwórz program, który pobiera od użytkownika tekst i wykonuje na nim różne operacje:
+Policz liczbę słów.
+Znajdź najczęściej występujące słowo i liczbę jego wystąpień.
+Policz, ile razy występują określone litery (np. a, e).
+Sprawdź, czy tekst zaczyna się lub kończy od podanego przez użytkownika słowa lub litery.
+Wykorzystaj metody stringów takie jak split(), count(), startswith(), endswith().
+Rozwinięcie: Dodaj możliwość zapisywania wyników analizy do pliku tekstowego.
+
+3. Gra "Zgadywanie liczby"
+Zbuduj grę, w której komputer losuje liczbę z zakresu od 1 do 100, a użytkownik próbuje ją odgadnąć.
+Komputer po każdym strzale informuje, czy liczba jest za mała, za duża, czy trafiona.
+Użytkownik ma ograniczoną liczbę prób, np. 10, a program wyświetla odpowiednią informację, gdy próby się skończą.
+Użyj funkcji random.randint() do losowania liczby oraz pętli while do obsługi prób użytkownika.
+Rozwinięcie: Dodaj poziomy trudności (np. różne zakresy liczb) oraz zapamiętywanie najlepszych wyników (najmniejsza liczba prób).
+
+4. Sortowanie listy uczniów
+Stwórz program, który przechowuje listę uczniów oraz ich wyniki egzaminów w postaci słownika: kluczami są imiona uczniów, a wartościami ich wyniki.
+Program ma umożliwiać:
+Dodawanie nowych uczniów i wyników.
+Wyświetlanie wszystkich uczniów posortowanych według wyników (malejąco).
+Znalezienie ucznia z najwyższym i najniższym wynikiem.
+Użyj słowników, list oraz funkcji takich jak sorted().
+Rozwinięcie: Dodaj opcję zapisywania i ładowania wyników z pliku CSV.
+
+5. Konwerter jednostek
+Stwórz program, który konwertuje różne jednostki miary. Program powinien obsługiwać:
+Konwersję temperatury między stopniami Celsjusza, Fahrenheita i Kelvina.
+Konwersję długości (metry, kilometry, mile, stopy).
+Konwersję masy (kilogramy, funty).
+Użytkownik wybiera, jaką jednostkę chce przekonwertować, podaje wartość, a program zwraca wynik.
+Wykorzystaj instrukcje if-else, funkcje do każdego typu konwersji i struktury danych takie jak słowniki do przechowywania jednostek.
+Rozwinięcie: Dodaj możliwość konwersji wielu wartości jednocześnie (np. lista wartości do konwersji).
+
+6. Organizer zadań (To-Do List)
+Stwórz prosty program do zarządzania listą zadań (to-do list). Program powinien pozwalać na:
+Dodawanie nowych zadań.
+Usuwanie zadań.
+Oznaczanie zadań jako wykonane.
+Wyświetlanie listy zadań (możesz dodać opcję filtrowania zadań wykonanych i niewykonanych).
+Wykorzystaj listy, pętle oraz struktury sterujące do zarządzania zadaniami.
+Rozwinięcie: Zaimplementuj zapis i odczyt listy zadań do pliku (np. w formacie tekstowym lub JSON), aby dane były przechowywane między sesjami.

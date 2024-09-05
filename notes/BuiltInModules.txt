@@ -1,0 +1,4 @@
+# Random
+import random
+
+random.randint(1, 10) - losuje liczbę całkową z przedziału od 1 do 9

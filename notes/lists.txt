@@ -1,0 +1,21 @@
+Listy w Pythonie stosowane są do przechowywania wielu wartości w obrębie jednej zmiennej
+Listy to jeden z czterech wbudowanych typów danych w Pythonie do przechowywania kolekcji danych. Pozostałe to tuple, sety i słowniki.
+Wszystkie będą miały różne własności i zastosowanie
+
+Listę tworzymy poprzez objęcie danych kwadratowym nawiasem, np. list = [1, 2, 3, 4, 5], list2 = ['apple', 'banana', 'cherry']
+Elementy listy są uporządkowane, zmienne i pozwalają na dublowanie wartości. Ponadto, listy są indeksowane. To znaczy, że pierwszy element listy
+posiada index [0], drugi element listy [1] itd. Ostatni element listy ma index [-1].
+
+Kiedy mówimy, że listy są uporządkowane, oznacza to, że elementy mają swój zdefiniowany porządek i ich kolejność nie zmieni się.
+Jeśli dodamy do listy nowy element, trafi on na koniec listy.
+Wyjątkiem są niektóre metody list, które mogą zmieniać porządek listy.
+
+Ponieważ wartośli listy są indeksowane, mogą się one powielać (zawsze będą miały inny index)
+
+Aby określić ile elementów ma lista, mozemy uzyc funkcji len() np. len(list)
+
+Listy mogą przechowywać każdy rodzaj danych: tekst, liczby, obiekty, itd.
+Listy mogą zawierać tylko jeden rodzaj danych, np. same stringi: ["apple", "banana", "cherry"]
+Listy mogą być również niejednorodne i zawierać dane różnego typu: [1, "apple", True, 3.14]
+
+Z perspektywy Pythona lista to objekt klasy list: <class 'list'>

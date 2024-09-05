@@ -1,0 +1,7 @@
+Lista koment stosowanych w terminalu (Windows)
+
+python -- version - sprawdzenie wersji pythona
+python -m pip install --upgrade pip - aktualizacja pipa
+python -m pip install -r requirements.txt - instalacja zainstalowanych modulow
+python -m http.server 8000 - uruchomienie serwera HTTP na porcie 8000
+python -m unittest -v - testy jednostkowe

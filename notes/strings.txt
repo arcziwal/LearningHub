@@ -1,0 +1,100 @@
+Stringi to typ danych przechowujący ciągi znaków. Python nie ma, w przeciwieństwie do innych języków, typu char, zamiast tego pojedynczy znak jest
+listą o długości 1. Stringi mogą znajdować się pomiędzy nawiasami pojedynczymi np. v1 = "Ala", albo podwójnymi: v2 = 'Ala'.
+
+# basics
+String można wyświetlić za pomocą funkcji print(): print("Ala ma kota")
+
+Długi tekst może być przechowywany wewnątrz potrójnego cudzysłowu, albo apostrofu, np.
+v3 = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+
+v4 = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+
+W takim wypadku, przerwanie linii odbędzie się w tym samym miejscu co w kodzie.
+
+Aby uzyskać pojedynczy znak z tekstu, użyjemy indeksy. np. v5 = "Ala ma kota"[0] (wypisze 'A')
+
+String można przepuścić również przez pętlę for, np.
+for x in "Ala ma kota":
+    print(x)
+(Wypisze 'A', 'l', 'a', ' ', 'm', 'a', ' ', 'k', 'o', 't', 'a')
+
+# len()
+Aby sprawdzić długość stringa, użyjemy len(): len("Ala ma kota") (wypisze 11)
+
+# in
+Aby sprawdzić czy konkretny znak występuje w stringu, użyjemy 'in': "kota" in "Ala ma kota" (wypisze True)
+
+# slicing
+Można uzyskać zakres znaków danego stringa, np. v6 = "Ala ma kota"[1:3] (wypisze 'la')
+Koniec zakresu nie jest wliczany do stringa
+Pierwszy znak ma indeks 0, drugi 1, itd.
+
+Jeśli pozostawimy index startowy pustym, to znaczy, ze zaczynamy zakres od poczatku stringa. Np.
+v7 = "Ala ma kota"[:5] (wypisze 'Ala m')
+
+Jeśli pozostawimy index końcowy pusty, to znaczy, że zakres rozpocznie się od indexu startowego i będzie obejmował resztę stringa. Np.
+v8 = "Ala ma kota"[5:] (wypisze 'a kota')
+
+Użycie ujemnych indexów sprawy, że zakres będzie liczony od końca stringa np.
+v9 = "Ala ma kota"[-5:-2] (wypisze ' ko')
+
+# modyfikowanie stringów
+upper() - zamienia wszystkie znaki na wielkie litery, np. v10 = "Ala ma kota".upper() (wypisze 'ALA MA KOTA')
+lower() - zamienia wszystkie znaki na małe litery, np. v11 = "Ala ma kota".lower() (wypisze 'ala ma kota')
+strip() - usuwa biale znaki z poczatku i konca stringa, np. v12 = "   Ala ma kota   ".strip() (wypisze 'Ala ma kota')
+replace() - zamienia ciag znaków w stringu, np. v13 = "Ala ma kota".replace("ma", "nie ma") (wypisze 'Ala nie ma kota')
+split() - podzieli ciąg znaków na stringi, np. v14 = "Ala ma kota".split() (wypisze ['Ala', 'ma', 'kota'])
+
+# concatenation
+Dodawanie stringów, np. v15 = "Ala ma " + "kota" (wypisze 'Ala ma kota')
+Mnożenie stringów, np. v16 = "Ala ma " * 3 (wypisze 'Ala ma Ala ma Ala ma ')
+
+# F-strings
+F-stringi wprowadzono od Pythona 3.6. Obecnie to najbardziej preferowana forma formatowania stringów. Np.
+name = "John"
+age = 18
+txt = f"My name is {name}, I am {age} years old"
+print(txt)
+(wypisze 'My name is John, I am 18 years old')
+
+Nawiasy {} mogą zawierać zmienne, operacje, funkcje i metody modyfikujące wartości, np.
+txt = f"The price is {price:.2f}" (wypisze 'The price is 9.99') - ".2f" oznacza, że zaokrąglana jest wartość do 2 miejsc po przecinku
+txt = f"The price is {10 * 15} dollars" (wypisze 'The price is 150 dollars')
+
+# Escape characters
+Escape character pomaga, kiedy do stringa chcemy dodać "nielegalny" znak. W takim wypadku używanym backslash'a '\' oraz znak na którym nam zależy/ Np.
+v17 = "I'm a \"bad\" guy" (wypisze 'I'm a "bad" guy')
+
+Inne escape charecters to:
+\n - nowa linia
+\t - tabulator
+\r - nowy wiersz
+\b - usuwa poprzedni znak
+\\ - backslash
+\' - apostrof
+\ooo - octal
+\xhh - hexa
+
+# String methods
+v18 = "Ala ma kota".upper() (wypisze 'ALA MA KOTA') - zamienia wszystkie znaki na wielkie
+v19 = "Ala ma kota".lower() (wypisze 'ala ma kota') - zmienia wszystkie znaki na małe
+v20 = "Ala ma kota".strip() (wypisze 'Ala ma kota') - usuwa biale znaki
+v21 = "Ala ma kota".replace("ma", "nie ma") (wypisze 'Ala nie ma kota') - zamienia ciąg znaków
+v22 = "Ala ma kota".split() (wypisze ['Ala', 'ma', 'kota']) -dzieli stringi na substringi
+v23 = ["Ala", "ma", "kota"].join(" ") (wypisze 'Ala ma kota') - łączy stringi za pomocą separatora
+v24 = "Ala ma kota".find("ma") (wypisze '4') - zwraca indeks pierwszego występenia 'ma', jeśli nie ma to zwraca -1
+v25 = "Ala ma kota".count("a") (wypisze '3') - zwraca ilość występujących 'a' w stringu
+v26 = "Ala ma kota".startswith("Ala") (wypisze 'True') - zwraca True jeśli string zaczyna się na 'Ala'
+v27 = "Ala ma kota".endswith("kota") (wypisze 'True') - zwraca True jeśli string konczy się na 'kota'
+v28 = "Ala ma kota".isalpha() (wypisze 'False') - zwraca True jeśli string zawiera tylko litery
+v29 = "123".isdigit() (wypisze 'True') - zwraca True jeśli string zawiera tylko cyfry
+v30 = "Ala ma kota".title() (wypisze 'Ala Ma Kota') - zamienia pierwsze litery na duże, pozostałe na małe
+v31 = "ala ma kota".capitalize() (wypisze 'Ala ma kota') - zamienia pierwsze litery na duże, pozostałe na małe
+v32 - "Ala ma kota".index("ma") (wypisze '4') - zwraca indeks pierwszego występenia 'ma', jeśli nie ma to zwraca bład
+

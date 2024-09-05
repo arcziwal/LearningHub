@@ -1,0 +1,46 @@
+W Pythonie występują następujące rodzaje operatorów:
+
+1. Arytmetyczne:
+    + - dodawanie
+    - - odejmowanie
+    * - mnożenie
+    / - dzielenie
+    // - dzielenie całkowite
+    % - reszta z dzielenia
+    ** - potegowanie
+
+2. Porównania:
+    == - równe
+    != - nie równe
+    > - wieksze od
+    < - mniejsze od
+    >= - równe lub wieksze od
+    <= - równe lub mniejsze od
+
+3. Logiczne:
+    and - zwraca True jeśli obie wartości są True, w przeciwnym wypadku zwraca False
+    or - zwraca True jeśli jedna z wartości jest True, w przeciwnym wypadku zwraca False
+    not - zwraca przeciwną wartość, zwraca False jeśli wartość jest true
+
+4. Operator wskazania:
+    is - porównuje czy dwa obiekty są takie same, z tą samą lokalizacją pamieci
+    is not - Zwraca True jeśli dwa obiekty nie są takie same
+
+5. Operator należności:
+    in - zwraca True jeśli wartość jest obecna w zbiorze
+    not in - zwraca True jeśli wartość nie jest obecna w zbiorze
+
+6. Operator przypisania:
+    = - przypisuje wartość do zmiennej, np. x = 5
+    += - dodaje wartość do zmiennej, np. x = 5, x += 5 (x wynosi 10)
+    -= - odejmuje wartość z zmiennej, np. x = 5, x -= 5 (x wynosi 0)
+    *= - mnoży wartość przez zmiennej, np. x = 5, x *= 5 (x wynosi 25)
+    /= - dzieli wartość przez zmiennej, np. x = 5, x /= 5 (x wynosi 1)
+    %= - reszta z dzielenia wartości przez zmiennej, np. x = 5, x %= 3 (x wynosi 2)
+    **= - poteguje wartość przez zmiennej, np. x = 5, x **= 3 (x wynosi 125)
+    //= - dzieli wartość przez zmiennej, ale zwraca reszte z dzielenia, np. x = 5, x //= 3 (x wynosi )
+    := - przypisuje wartość do zmiennej, ale zwraca wartość, np. x = 5, x := 3 (x wynosi 3), np. w wypadku zapytania if:
+
+    x := 3 if x > 5 else x
+    Powyższy zapis oznacza, że w przypadku jeśli x > 5, x przyjmuje wartość 3, w przeciwnym przypadku x przyjmuje wartość x.
+

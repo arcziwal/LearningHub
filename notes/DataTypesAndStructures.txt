@@ -1,0 +1,44 @@
+Zmienne mogą przechowywać dane różnego typu (np. tekst, liczby, obiekty, itd.). Python posiada następujące wbudowane, domyślne typy danych:
+
+# Typy tekstowe:
+- str - ciąg znaków, np. v1 = "Ala ma kota"
+
+# Typy numeryczne:
+- int - liczby całkowite, np. v2 = 5
+- float - liczby zmiennoprzecinkowe, np. v3 = 5.5
+- complex - liczby zespolone, np. v4 = 5 + 2j
+
+# Typy sekwencyjne:
+- list - listy, np. v5 = [1, 2, 3]
+- tuple - krotki, np. v6 = (1, 2, 3)
+- range - zbiory, np. v7 = range(1, 10)
+
+# Typy mapujące:
+- dict - słowniki, np. v8 = {"a": 1, "b": 2}
+
+# Typy zestawowe:
+- set - zbiory, np. v9 = {1, 2, 3}
+- frozenset - zbiory niestandardowe, np. v10 = frozenset({1, 2, 3})
+
+# Typy logiczne:
+- bool - logiczne, np. v11 = True
+
+# Typy binarne:
+- bytes - bajty, np. v12 = b"hello"
+- bytearray - tablice bajtów, np. v13 = bytearray(b"hello")
+- memoryview - widok na tablice bajtów, np. v14 = memoryview(b"hello")
+
+# Typ None:
+- NoneType - pusty typ, np. v15 = None
+
+Żeby uzyskać typ danej zmiennej, musisz użyc metody type(): v16 = type(v15) Np.
+x = 5
+print(type(x))
+
+Jedną wartość można równocześnie przypisać do kilku zmiennych. np.
+x = y = z = 5
+
+Odwrotnie, można rozpakować wartości z listy albo krotki jednocześnie do kilku zmiannych:
+v = [1, 2, 3]
+a, b, c = v
+
