@@ -19,3 +19,141 @@ Listy mogą zawierać tylko jeden rodzaj danych, np. same stringi: ["apple", "ba
 Listy mogą być również niejednorodne i zawierać dane różnego typu: [1, "apple", True, 3.14]
 
 Z perspektywy Pythona lista to objekt klasy list: <class 'list'>
+
+Ponieważ listy są indeksowane, do poszczególnych elementów można dostać się odnosząc się do ich indeksów.
+Np. list1 = ['apple', 'banana', 'cherry']
+    list1[0] = 'apple'
+    list1[1] = 'banana'
+    list1[2] = 'cherry'
+
+Ujemne indeksy odnoszą się do ostatniego elementu listy. Np. list1 = ['apple', 'banana', 'cherry']
+    list1[-1] = 'cherry'
+    list1[-2] = 'banana'
+
+Można również odnieść się do specyficznego zakresu listy, na podobnej zasadzie jak w wypadku stringów:
+list1 = ['apple', 'banana', 'cherry', 'orange', 'kiwi', 'melon', 'mango']
+    list1[2:5] = ['cherry', 'orange', 'kiwi']
+    list1[:3] = ['apple', 'banana', 'cherry']
+    list1[2:] = ['cherry', 'orange', 'kiwi', 'melon', 'mango']
+    list1[-4:-1] = ['orange', 'kiwi', 'melon']
+
+Aby określić, czy dany element jest na liście listy, użyjemy operator in. np. 'cherry' in list1
+
+Aby zmienić wartość listy, przypisujemy nową wartość do elementowi listy odnosząc się do jego indexu
+list2 = ['apple', 'banana', 'cherry']
+list2[1] = 'kiwi'
+print(list2) # ['apple', 'kiwi', 'cherry']
+
+W podobny sposób można zmieniać zakres (range) listy:
+list3 = ['apple', 'banana', 'cherry', 'orange', 'kiwi', 'melon', 'mango']
+list3[1:3] = ['blackcurrant', 'watermelon']
+print(list3) # ['apple', 'blackcurrant', 'watermelon', 'orange', 'kiwi', 'melon', 'mango']
+Długość listy będzie się zmieniać jeśli liczba wartości dostarczanych do listy nie będzie się zgadzać z liczbą wartości które ma zastąpić
+
+Aby dodać (instert) nową wartość do listy, bez zmieniania pozostałych wartości użyjemy metody instert()
+list4 = ['apple', 'banana', 'cherry']
+list4.insert(1, 'kiwi')
+print(list4) # ['apple', 'kiwi', 'banana', 'cherry']
+
+Aby dodać nowy element na końcu listy, używamy metody append()
+list5 = ['apple', 'banana', 'cherry']
+list5.append('orange')
+print(list5) # ['apple', 'banana', 'cherry', 'orange']
+
+Aby dodać elementy z innej listy do obecnej listy stosujemy metodę extend()
+list6 = ['apple', 'banana', 'cherry']
+list6.extend(['orange', 'kiwi'])
+print(list6) # ['apple', 'banana', 'cherry', 'orange', 'kiwi']
+Elementy dodawane zostaną wstawione na koniec listy
+Metoda extend() nie ma zastosowania tylko do list. Można za jej pomocą dodawać też elementy dowolnego iterowalnego obiektu (np. słownika, krotki, itp.)
+
+Metoda remove() usuwa z listy konkretny element
+list7 = ['apple', 'banana', 'cherry']
+list7.remove('banana')
+print(list7) # ['apple', 'cherry']
+Jeśli na liście występuje więcej niż jeden taki sam element, usunięty zostanie pierwszy napotkany
+
+Metoda pop() usuwa z listy element o konkretnym indexie
+list8 = ['apple', 'banana', 'cherry']
+list8.pop(1)
+print(list8) # ['apple', 'cherry']
+
+Jeśli nie poda się numeru indeksu, usunięty zostanie ostatni element listy
+list9 = ['apple', 'banana', 'cherry']
+list9.pop()
+print(list9) # ['apple', 'banana']
+
+Żeby usunąć z lisy element o danym indeksie możemy też zastosować słowo kluczowe del
+list10 = ['apple', 'banana', 'cherry']
+del list10[0]
+print(list10) # ['banana', 'cherry']
+
+Słowo kluczowe może również usunąć całą listę:
+del list10
+
+Aby wyczyścić listę z wszystkich elementów, używamy metody clear()
+list11 = ['apple', 'banana', 'cherry']
+list11.clear()
+print(list11) # []
+
+Na liście można wykonywać pętle, np. for, przechodząc przez elementy listy:
+list12 = ['apple', 'banana', 'cherry']
+for x in list12:
+    print(x)
+
+Można również iterować przez indeksy wartości odnosząc się do ich numerów indeksów. Aby stworzyć iterator wykorzystujemy
+range() oraz (len)
+
+list13 = ['apple', 'banana', 'cherry']
+for i in range(len(list13)):
+    print(list13[i])
+
+Listę można też przepuszczać przez pętlę while. Należy użyć funkcji len() żeby określić długość listy, zacząć od zera i
+iterować przez kolejne elementy listy, odnosząc się do ich indeksu.
+
+list14 = ['apple', 'banana', 'cherry']
+i = 0
+while i < len(list14):
+    print(list14[i])
+    i += 1
+
+Do poruszania się w pętli for po liście, można również użyć list comprehension:
+list15 = ['apple', 'banana', 'cherry']
+[print(x) for x in list15]
+
+Listy posiadają metodę sort(), która sortuje elementy alfanumerycznie, rosnąco domyślnie
+list16 = ['banana', 'apple', 'cherry']
+list16.sort()
+print(list16) # ['apple', 'banana', 'cherry']
+
+list17 = [100, 50, 65, 82, 23]
+list17.sort()
+print(list17) # [23, 50, 65, 82, 100]
+
+Aby sortować listę w odwrotnym porzadku, uzywamy metody sort(reverse=True)
+list18 = [100, 50, 65, 82, 23]
+list18.sort(reverse=True)
+print(list18) # [100, 82, 65, 50, 23]
+
+Sortować, można również na podstawie własnej funkcji, poprzez stosowanie argumentu key = function
+Np. Sortowanie według tego, jak daleko jaka liczba leży od 50
+
+def myfunc(n):
+  return abs(n - 50)
+
+list19 = [100, 50, 65, 82, 23]
+list19.sort(key = myfunc)
+print(list19) # [50, 65, 23, 82, 100]
+
+Domyślnie sortowanie jest wrażliwe na wielkość liter. Aby to zmienić można dostarczyć metodzie odpowiedni klucz
+list20 = ['Banana', 'apple', 'Cherry', 'pineapple']
+list20.sort(key = str.lower)
+print(list20) # ['apple', 'Banana', 'Cherry', 'pineapple']
+
+Jeśli chcemy odwrócić kolejność elementów z listy (pierwszy staje się ostatnim, ostatni pierwszym) stosujemy metodę reverse()
+list21 = ['apple', 'banana', 'cherry']
+list21.reverse()
+print(list21) # ['cherry', 'banana', 'apple']
+
+
+
