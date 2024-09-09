@@ -1,3 +1,17 @@
+Najważniejsze metody list
+1. Append() - dodawanie elementów na koniec listy
+2. Clear() - czyszczenie listy
+3. Copy() - kopiowanie listy
+4. Count() - liczenie elementów listy
+5. Extend() - rozszerzanie listy o elementy z innej listy
+6. Index() - zwraca index pierwszego elementu na liście o określonej wartości
+7. Insert() - wstawianie elementów do listy na określony index
+8. Pop() - usuwanie elementów z listy z określonego indexu
+9. Remove() - usuwanie elementów z listy o określonej wartości
+10. Reverse() - odwracanie listy
+11. Sort() - sortowanie listy
+#################################################################################################################################################
+
 Listy w Pythonie stosowane są do przechowywania wielu wartości w obrębie jednej zmiennej
 Listy to jeden z czterech wbudowanych typów danych w Pythonie do przechowywania kolekcji danych. Pozostałe to tuple, sety i słowniki.
 Wszystkie będą miały różne własności i zastosowanie
@@ -154,6 +168,47 @@ Jeśli chcemy odwrócić kolejność elementów z listy (pierwszy staje się ost
 list21 = ['apple', 'banana', 'cherry']
 list21.reverse()
 print(list21) # ['cherry', 'banana', 'apple']
+
+# Kopiowanie list
+
+Nie można zwyczajnie skopiować list wpisując list2 = list1, ponieważ w takim wypadku list2 będzie tylko odniesieniem do lokalizacji w pamięci
+list1. Wszystkie zmiany dokonane na list1 będą widoczne również na zmiennej list2
+
+Do skopiowania listy można użyć wbudowanej metody copy()
+list22 = ['apple', 'banana', 'cherry']
+list23 = list22.copy()
+print(list23)
+
+Innym sposobem na skopiowanie listy jest użycie metody list()
+list24 = ['apple', 'banana', 'cherry']
+list25 = list(list24)
+print(list25)
+
+Trzeci sposób to zrobienie slice listy bez wartości początkowej i końcowej
+list26 = ['apple', 'banana', 'cherry', 'orange', 'kiwi', 'mango']
+list27 = list26[:]
+print(list27)
+
+# Łączenie list
+
+Na połączenie ze sobą list istnieje kilka sposobów.
+Najprostszym jest połączenie ich przez operator +. Sposób ten tworzy nową listę, oryginalne pozostają nietknięte
+
+Drugi sposó to użycie metody append() do dodania elementów jednej listy na koniec drugiej:
+list28 = ['apple', 'banana', 'cherry']
+list29 = ['orange', 'kiwi', 'mango']
+list28.append(list29)
+print(list28) # ['apple', 'banana', 'cherry', ['orange', 'kiwi', 'mango']]
+Dodane elementy nie są pojedyncze, ale są elementami podlisty na końcu pierwszej
+Można tego uniknąć poprzez dodawanie elementów z pierwszej listy do drugiej iterując je w pętli for
+
+Trzeci sposób to metoda extend(). Modyfikuje ona oryginalną listę, dodając elementy z drugiej listy jako pojedyncze elementy
+list30 = ['apple', 'banana', 'cherry']
+list31 = ['orange', 'kiwi', 'mango']
+list30.extend(list31)
+print(list30) # ['apple', 'banana', 'cherry', 'orange', 'kiwi', 'mango']
+
+
 
 
 

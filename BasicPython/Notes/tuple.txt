@@ -1,0 +1,69 @@
+Tuple są stosowane do przechowywania wielu wartości, ale niezmiennych. Jest to jeden z czterech wbudowanych typów danych w Pythonie.
+Tuple to kolekcje danych uporządkowane jednak niezmienne.
+Tuple zawarte są w obrębie nawiasów okrągłych
+Tuple są indeksowane, mogą zatem zawierać duplikaty wartości
+Są niezmienne wobec czego nie można zmieniać ich wartości, dodawać lub usuwać elementy, sortować itd.
+
+Do elementów tupli można dostać się w taki sposób jak przy listach.
+Każdy element można uzyskąc poprzez odniesienie się do jego indeksu.
+Indeksy mogą przyjmować również numery ujemne (liczone od końca)
+Możliwe jest uzyskanie wycinku tupli poprzez użycie zakresu [:].
+Np. tuple1 = ('a', 'b', 'c', 'd')
+    tuple1[1:3] = ('b', 'c')
+
+Tuple są niezmienne, jednak jest możliwe zmienianie, dodawanie i usuwanie wartości, pośrednio, konwertując tuplę do listy (list()), a następnie z powrotem
+do tupli tuple()
+
+Aby dodać dwie tuple do siebie wystarczy użyć operatora +
+WAŻNE: Aby stworzyć tuplę z jedną wartością, należy pamiętać o przecinku po pierwszej wartości. Inaczej nie będzie to traktowane jako tupla:
+tuple1 = ('apple',)
+
+Tuplę można całkowicie usunąć poprzez słowo kluczowe del
+tuple1 = ('apple', 'banana', 'cherry')
+del tuple1
+print(tuple1) # NameError: name 'tuple1' is not defined
+
+# Pakowanie i wypakowywanie tupli
+
+Tworząc tuplę, przypisujemy do niej wartości. Nazywane jest to "pakowaniem" tupli.
+frutis = ('apple', 'banana', 'cherry')
+
+W Pythonie możliwe jest jednak również wyciąganie wartości z tupli do zmiennych, nazywane jest to "wypakowaniem" tupli (ang. unpacking)
+frutis = ('apple', 'banana', 'cherry')
+
+a, b, c = frutis
+print(a) # apple
+print(b) # banana
+print(c) # cherry
+
+Ilość zmiennych musi zgadzać się z ilością wartości w tupli. W przeciwnym wypadku trzeba użyć "*" do przechwycenia reszty wartości
+frutis = ('apple', 'banana', 'cherry', 'orange', 'kiwi', 'melon', 'mango')
+a, b, *c = frutis
+print(a) # apple
+print(b) # banana
+print(c) # ['cherry', 'orange', 'kiwi', 'melon', 'mango']
+
+# Iterowanie przez tuple
+
+Tuple również można iterować pętlą for
+tuple1 = ('apple', 'banana', 'cherry')
+for x in tuple1:
+  print(x)
+
+Możliwe jest również iterowanie po numerach indeksów tupli używając range() i len()
+tuple2 = ('apple', 'banana', 'cherry', 'orange', 'kiwi', 'melon', 'mango')
+for i in range(len(tuple2)):
+  print(tuple2[i])
+
+Możliwe jest również użycie pętli while jednak należy wcześniej uzskać liczbę elementów tupli (len())
+tuple3 = ('apple', 'banana', 'cherry', 'orange', 'kiwi', 'melon', 'mango')
+i = 0
+while i < len(tuple3):
+  print(tuple3[i])
+  i += 1
+
+Tuple posiadają tylko dwie metody:
+count() -  zlicza ilość wystapien danej wartości w tupli
+index() - zwraca indeks pierwszego wystapienia danej wartości w tupli
+
+
