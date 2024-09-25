@@ -47,14 +47,21 @@ def evaluate(expression):
         elif expression[i] in ["+", "-", "*", "/"]:  # in case char is operator
             while operators and operator_precedence(operators[-1]) >= operator_precedence(expression[i]):
                 #  check if operator has higher precedence than top of stack
-                calculate(operators, values)  # calculate expression if it has higher precedence
+                try:
+                    calculate(operators, values)  # calculate expression if it has higher precedence
+                except ValueError as e:
+                    print(e)
+                    return "Nie można obliczyć"
             operators.append(expression[i])  # adds new operator to stack
 
         i += 1
 
     while operators:  # calculate remaining expression
-        calculate(operators, values)
-
+        try:
+            calculate(operators, values)
+        except ValueError as e:
+            print(e)
+            return "Nie można obliczyć"
     return values[0]  # return result (only one value in stack)
 
 if __name__ == "__main__":
