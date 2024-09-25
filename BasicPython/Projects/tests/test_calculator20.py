@@ -19,19 +19,14 @@ class TestEvaluateFunction(unittest.TestCase):
         self.assertEqual(evaluate("5 + 4 * 3 - 4 / 2"), 15.0)
 
     def test_zero_division(self):
-        with self.assertRaises(ValueError) as context:
-            evaluate("10 / 0")
-        self.assertEqual(str(context.exception), "Dzielenie przez zero")
+        self.assertEqual(evaluate("10 / 0"), "Nie można obliczyć dzielenia przez zero")
 
     def test_invalid_char(self):
-        with self.assertRaises(ValueError) as context:
-            evaluate("5 + a")
-        self.assertEqual(str(context.exception), "Nieznany operator")
+        self.assertEqual(evaluate("5 + a"), "Nieprawidłowe wyrażenie. Sprawdź składnię i użyte znaki")
 
     def test_consecutive_operators(self):
-        with self.assertRaises(ValueError) as context:
-            evaluate("5 ++ 3")
-        self.assertEqual(str(context.exception), "Nieznany operator")
+
+        self.assertEqual(evaluate("5 ++ 3"), "Nieprawidłowe wyrażenie. Sprawdź składnię i użyte znaki")
 
     def test_missing_spaces(self):
         self.assertEqual(evaluate("5+3"), 8)

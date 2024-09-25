@@ -1,4 +1,21 @@
+import re
+
+def validate_expression(expression):
+    pattern = r'^\s*[\d]+(\s*[-+*/]\s*[\d]+)*\s*$'
+    if not re.match(pattern, expression):
+        return False
+
+    if re.search(r'[-+*/]{2,}', expression):
+        return False
+
+    return True
+
+
+
 def evaluate(expression):
+    if not validate_expression(expression):
+        return "Nieprawidłowe wyrażenie. Sprawdź składnię i użyte znaki"
+
     def operator_precedence(operator):
         if operator in ["+", "-"]:
             return 1  # lower precedence
@@ -22,7 +39,7 @@ def evaluate(expression):
             values.append(left * right)
         elif operator == "/":
             if right == 0:
-                raise ValueError("Dzielenie przez zero")
+                raise ZeroDivisionError("Dzielenie przez zero")
             values.append(left / right)
         else:
             return None
@@ -49,9 +66,9 @@ def evaluate(expression):
                 #  check if operator has higher precedence than top of stack
                 try:
                     calculate(operators, values)  # calculate expression if it has higher precedence
-                except ValueError as e:
+                except ZeroDivisionError as e:
                     print(e)
-                    return "Nie można obliczyć"
+                    return "Nie można obliczyć dzielenia przez zero"
             operators.append(expression[i])  # adds new operator to stack
 
         i += 1
@@ -59,20 +76,22 @@ def evaluate(expression):
     while operators:  # calculate remaining expression
         try:
             calculate(operators, values)
-        except ValueError as e:
+        except ZeroDivisionError as e:
             print(e)
-            return "Nie można obliczyć"
+            return "Nie można obliczyć dzielenia przez zero"
     return values[0]  # return result (only one value in stack)
-
 if __name__ == "__main__":
     while True:
         expression = input("Podaj wyrażenie do obliczenia: ")
         result = evaluate(expression)
-        print(f"Wynik wyrażenia {expression} to: ", result)
+        if type(result) == int or type(result) == float:
+            print(f"Wynik wyrażenia {expression} to: ", result)
+        else:
+            print(result)
         repeat = input("Czy chcesz wykonać kolejne obliczenie? (t/n): ")
         if repeat in ['t', 'T', 'y', 'Y']:
             continue
         else:
-            print("Dziśkuje za użycie kalkulatora. Do zobaczenia")
+            print("Dziękuję za użycie kalkulatora. Do zobaczenia")
             break
 
