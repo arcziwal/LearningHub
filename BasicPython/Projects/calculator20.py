@@ -1,7 +1,7 @@
 import re
 
 def validate_expression(expression):
-    pattern = r'^\s*[\d]+(\s*[-+*/]\s*[\d]+)*\s*$'
+    pattern = r'^\s*[\d]+(\.[\d]+)?(\s*[-+*/]\s*[\d]+(\.[\d]+)?)*\s*$'
     if not re.match(pattern, expression):
         return False
 
@@ -9,7 +9,6 @@ def validate_expression(expression):
         return False
 
     return True
-
 
 
 def evaluate(expression):
@@ -53,12 +52,13 @@ def evaluate(expression):
             i += 1
             continue
 
-        if expression[i].isdigit():  # in case char is number (with one or more digits)
-            num = 0
-            while i < len(expression) and expression[i].isdigit():  # evaluates number with multiple digits
-                num = num * 10 + int(expression[i])
+        if expression[i].isdigit() or expression[i] == ".":  # in case char is number (with one or more digits)
+            num_str = ""  # string to build a number
+            while i < len(expression) and (expression[i].isdigit() or expression[i] == "."):  # evaluates number with multiple digits
+                num_str += expression[i]
                 i += 1
-            values.append(num)  # adds number to values
+
+            values.append(float(num_str))  # converts num_str to float
             i -= 1  # returns 1 step back, so iteration does not skip next char after number
 
         elif expression[i] in ["+", "-", "*", "/"]:  # in case char is operator
@@ -79,7 +79,8 @@ def evaluate(expression):
         except ZeroDivisionError as e:
             print(e)
             return "Nie można obliczyć dzielenia przez zero"
-    return values[0]  # return result (only one value in stack)
+    return round(values[0], 5)  # return result (only one value in stack)
+
 if __name__ == "__main__":
     while True:
         expression = input("Podaj wyrażenie do obliczenia: ")

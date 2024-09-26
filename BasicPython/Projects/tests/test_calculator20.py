@@ -25,7 +25,6 @@ class TestEvaluateFunction(unittest.TestCase):
         self.assertEqual(evaluate("5 + a"), "Nieprawidłowe wyrażenie. Sprawdź składnię i użyte znaki")
 
     def test_consecutive_operators(self):
-
         self.assertEqual(evaluate("5 ++ 3"), "Nieprawidłowe wyrażenie. Sprawdź składnię i użyte znaki")
 
     def test_missing_spaces(self):
@@ -33,6 +32,9 @@ class TestEvaluateFunction(unittest.TestCase):
 
     def test_float_numbers_operations(self):
         self.assertAlmostEqual(evaluate("2 * 3.5"), 7.0)
+
+    def test_float_numbers_valid_format(self):
+        self.assertEqual(evaluate("3.14 + 1.2.3"), "Nieprawidłowe wyrażenie. Sprawdź składnię i użyte znaki")
 
 if __name__ == "__main__":
     unittest.main()
