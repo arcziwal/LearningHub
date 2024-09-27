@@ -1,0 +1,120 @@
+Słowniki są wykorzystywane do przechowywania danych w formie par klucz:wartość 
+To kolekcje które są uporządkowane, możliwe do zmiany i nie pozwalają na duplikaty
+
+Słowniki zapisywane są w formie nawiasów klamrowych: 
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+
+Do elementów słownika można odnosić się za pomocą nazwy klucza, np.
+print(thisdict["brand"])
+
+Słowniki nie mogą mieć dwóch elementów o tym samym kluczu
+
+Aby określić ile elementów ma słownik, używamy funkcji len()
+
+Drugim sposobem na otrzymanie elementu ze słownika przez odniesienie się do klucza, jest metoda get():
+x = thisdict.get("model")
+
+Metoda keys() zwraca listę wszystkich kluczy w słowniku
+x = thisdict.keys()
+
+Metoda values() zwraca listę wszystkich wartości w słowniku
+x = thisdict.values()
+
+Metoda items() zwraca każdy element w słowniku jako tuplę w liście
+
+Aby określić czy dany klucz występuje w słowniku, używamy słowa kluczowego in
+
+Zmiana wartości danego klucza również wykonywana jest poprzez odniesienie do niego:
+thisdict["year"] = 2018 
+
+Można to zrobić również poprzez metodę update(), co jest szczególnie przydatne gdy chcemy zmienić/dodać wiele par w słowniku:
+thisdict.update({"year": 2020})
+
+Powyższe metody służą tak do modyfikowania wartości, jak i do ich dodawania. Jeśli w słowniku istnieje dany klucz, jego wartość zostanie zmieniona. Jeśli klucz nie istnieje, zostanie dodana nowa para klucz:wartość
+
+Do usuwania elementów ze słownika można podejść na kilka sposobów:
+
+Metoda pop() usuwa element o konkretnym kluczu:
+thisdict.pop("model") - usuwa parę klucz:wartość, gdzie klucz nosi nazwę "model"
+
+Metoda popitem() usuwa ostatnio dodany element do słownika (w wersjach Pythona 3.7 i wcześniejsze, usuwany jest losowy element)
+thisdict.popitem()
+
+Słowo kluczowe del usuwa element o konkrentym kluczu:
+del thisdict["model"]
+
+Słowo kluczowe del może również służyć do usunięcia całego słownika!!!
+del thisdict
+
+Metoda clear() nie usuwa słownika, ale usuwa z niego wszystkie wartości 
+thisdict.clear()
+
+LOOPOWANIE PRZEZ SŁOWNIKI
+
+Aby wykonać pętlę na słowniku używamy pętli for
+Podczas iteracji zwracanymi wartościami są klucze, jednak są metody, żeby uzyskać również wartości
+
+
+for x in thisdict:
+    print(x) #  drukuje wszystkie klucze ze słownika, jeden po drugim
+
+for x in thisdict:
+    print(thisdict[x]) #  drukuje wszystkie wartości, jedna po drugiej
+
+for x in thisdict.values():
+    print(x) #  również drukuje wszystkie wratości słownika
+
+for x in thisdict.keys():
+    print(x) #  ta drukuje wszystkie klucze
+
+Aby iterować zarówno przez klucze jak i wartości używamy metody items()
+
+for x, y in thisdict.items():
+    print(x, y)
+
+
+KOPIOWANIE SŁOWNIKÓW
+
+Nie można zwyczajnie odnieść się do jednego słownika, żeby stworzyć nowy
+dict1 = dict2
+W powyższym wypadku dict1 będzie odnosił się do dict2 i wszystkie zmiany w tym drugim widoczne będą również w pierwszym
+
+Aby skopiować słownik można użyć wbudowanej metody copy()
+mydict = thisdict.copy()
+
+Można również użyć funkcji dict() na już istniejącym słowniku:
+mydict = dict(thisdict)
+
+Python umożliwia również tworzenie zagnieżdżonych słowników:
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+
+Aby uzyskać dostęp do zagnieżdżonego słownika, zaczynamy zawsze od zewnętrznego słownika:
+print(myfamily["child2"]["name"]) odnosi się do klucza 'name' w słowniku 'child2' wewnątrz słownika 'myfamily'
+
+Aby iterować przez zagnieżdżone słowniki musimy wykorzystać podwójną pętlę for: 
+for x, obj in myfamily.items():
+  print(x)
+
+  for y in obj:
+    print(y + ':', obj[y])
